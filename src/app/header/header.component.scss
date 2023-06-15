@@ -1,0 +1,51 @@
+@import "../../styles/_variables.scss";
+
+.container {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $primary-color;
+}
+
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 0 7.5rem;
+  font-size: 1.6rem;
+
+  & > * {
+    flex-basis: 33%;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+
+    & img {
+      width: 22rem;
+      margin: 0.8rem 0;
+    }
+  }
+
+  &__lang {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__lang-separator {
+    margin: 0 0.5rem;
+  }
+
+  &__lang {
+    text-transform: uppercase;
+    cursor: pointer;
+    &.active {
+      font-weight: 900;
+    }
+  }
+  &__bottom-bar {
+    display: block;
+    padding: 0 5rem;
+  }
+}

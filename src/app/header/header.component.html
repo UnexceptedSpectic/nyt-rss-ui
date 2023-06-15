@@ -1,0 +1,26 @@
+<div class="container">
+  <header class="header">
+    <div class="header__date">{{ currentDate | date : "EEE, d MMM y" }}</div>
+    <div class="header__logo">
+      <img src="{{ logoSrc }}" alt="New York Times Logo" />
+    </div>
+    <div class="header__lang">
+      <span
+        class="header__lang"
+        [ngClass]="{ active: isEnglish() }"
+        (click)="setEnglish()"
+        [attr.aria-label]="'Click to change the language to English'"
+        >eng</span
+      >
+      <span class="header__lang-separator">\</span>
+      <span
+        class="header__lang"
+        [ngClass]="{ active: isSpanish() }"
+        (click)="setSpanish()"
+        [attr.aria-label]="'Click to change the language to Spanish'"
+        >esp</span
+      >
+    </div>
+  </header>
+  <app-horizontal-line class="header__bottom-bar"></app-horizontal-line>
+</div>

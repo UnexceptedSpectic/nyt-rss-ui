@@ -1,0 +1,55 @@
+@import "../../styles/_variables.scss";
+
+.article {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  height: 13rem;
+  background-color: inherit;
+
+  &__title,
+  &__description,
+  &__figure {
+    cursor: pointer;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60%;
+    align-self: stretch;
+  }
+  &__date {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+  &__title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 0.05rem;
+    margin-bottom: 1.4rem;
+  }
+  &__description {
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-bottom: auto;
+  }
+  &__author {
+    color: $color-light-gray;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 1.6rem;
+  }
+  &__figure {
+    flex-basis: 35%;
+    overflow: hidden;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<article class="article">
+  <header class="article__header">
+    <time
+      class="article__date"
+      [attr.datetime]="article.date | date : 'y-mm-dd'"
+      [attr.aria-label]="
+        'Published date: ' + (article.date | date : 'longDate')
+      "
+      >{{ article.date | date : "MMM dd, y" | uppercase }}</time
+    >
+    <h2
+      class="article__title"
+      (click)="openArticle()"
+      [attr.aria-label]="'Click to read the full article: ' + article.title"
+    >
+      {{ article.title }}
+    </h2>
+    <p
+      class="article__description"
+      (click)="openArticle()"
+      [attr.aria-label]="'Click to read the full article: ' + article.title"
+    >
+      {{ article.description }}
+    </p>
+    <p class="article__author">BY {{ article.author | uppercase }}</p>
+  </header>
+
+  <figure
+    class="article__figure"
+    (click)="openArticle()"
+    [attr.aria-label]="'Click to read the full article: ' + article.title"
+  >
+    <img src="{{ article.imageUrl }}" alt="{{ article.imageDescription }}" />
+  </figure>
+</article>
